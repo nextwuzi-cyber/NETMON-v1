@@ -14,7 +14,7 @@ Dockerized GUI: Seamless X11-forwarding for consistent UI rendering across diffe
 
 ## 📦 Quick Start
 1. Clone the repo:
-   `git clone https://github.com/твоё_имя/Netmon.git`
+   `git clone https://github.com/nextwuzy-cyber/NETMON-v1.git`
 2. Run the tactical suite:
    `chmod +x run_docker.sh && ./run_docker.sh`
 
