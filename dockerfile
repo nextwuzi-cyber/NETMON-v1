@@ -1,8 +1,5 @@
-# Используем Python 3.12 на базе Debian
 FROM python:3.12-slim
 
-# Устанавливаем системные зависимости
-# libgl1 и libglx-mesa0 решают проблему с libGL.so.1
 RUN apt-get update && apt-get install -y \
     nmap \
     libpcap-dev \
@@ -28,14 +25,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Копируем и ставим Python-зависимости
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Копируем проект
 COPY . .
 
-# Переменные для графики
 ENV QT_QPA_PLATFORM=xcb
 ENV DISPLAY=:0
 
