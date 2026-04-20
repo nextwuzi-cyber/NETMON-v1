@@ -5,12 +5,7 @@ class NetworkScanner:
         self.nm = nmap.PortScanner()
 
     def scan_hosts(self, target, arguments="-T4 -sV -O --osscan-guess"):
-        """
-        Усложненное сканирование:
-        -sV: Определение версий сервисов
-        -O: Определение ОС (требует sudo/root)
-        """
-        
+
         self.nm.scan(hosts=target, arguments=arguments)
         results = []
         
